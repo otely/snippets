@@ -1,0 +1,5 @@
+https://www.tutorialspoint.com/android/
+https://www.tutorialspoint.com/php/
+https://www.w3schools.com/js/
+https://www.tutorialspoint.com/sql/
+https://www.w3schools.com/bootstrap/
