@@ -1,3 +1,13 @@
+private boolean isOnline(Context ctx) {
+    	ConnectivityManager connectivityManager =
+    	(ConnectivityManager)
+    	ctx.getSystemService(Context.CONNECTIVITY_SERVICE);
+    	NetworkInfo networkInfo =
+    	connectivityManager.getActiveNetworkInfo();
+    	return (networkInfo != null &&
+    	networkInfo.isConnected());
+    	}
+
 private boolean isNetworkAvailable(Context ctx)   {
     	StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
     	StrictMode.setThreadPolicy(policy);
