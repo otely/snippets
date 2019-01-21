@@ -1,0 +1,14 @@
+Best Way To Hide Application Icon From Launcher You Can Use <category android:name="android.intent.category.LEANBACK_LAUNCHER"/> In Your Manifest MainActivity
+
+  <activity android:name=".MainActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+        </intent-filter>
+    </activity>
+also add uses-feature
+
+<uses-feature
+    android:name="android.software.leanback"
+    android:required="true" />
+    
