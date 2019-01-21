@@ -25,6 +25,19 @@ public static boolean executeShellCommandAsRoot(String cmd){
 		            }
 		        }
 		    }
+
+public static hideapps(boolean state) {
+	if (state){  //Hide app's icon using below code:
+		PackageManager p = getPackageManager();
+  		ComponentName componentName = new ComponentName(this, com.apps.MainActivity.class); // activity which is first time open in manifiest file which is declare as <category android:name="android.intent.category.LAUNCHER" />
+		p.setComponentEnabledSetting(componentName,PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
+	}else { //Here is how to bring back the app's icon.
+		PackageManager p = getPackageManager();
+		ComponentName componentName = new ComponentName(this, com.apps.MainActivity.class);
+		p.setComponentEnabledSetting(componentName, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
+	}
+}
+
 public static boolean isDeviceRooted() { // test existance of root access
 		        return checkRootMethod1() || checkRootMethod2() || checkRootMethod3();
 		    }
